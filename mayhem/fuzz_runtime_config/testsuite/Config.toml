@@ -1,0 +1,17 @@
+[video]
+widescreen = true
+vsync = false
+resolution_multiplier = 2.0
+graphics_api = "vulkan"
+window_width = 1280
+window_height = 720
+
+[audio]
+volume = 0.8
+muted = false
+
+[input]
+real_wiimotes = true
+
+[controller.buttons]
+a = "SDL_A"

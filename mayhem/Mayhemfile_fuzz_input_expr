@@ -1,0 +1,9 @@
+project: savantenvs/Wiicompiled
+target: fuzz_input_expr
+cmds:
+  - cmd: /mayhem/fuzz_input_expr
+    libfuzzer: true
+    timeout: 5
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_input_expr/testsuite

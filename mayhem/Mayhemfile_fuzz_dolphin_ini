@@ -1,0 +1,9 @@
+project: savantenvs/Wiicompiled
+target: fuzz_dolphin_ini
+cmds:
+  - cmd: /mayhem/fuzz_dolphin_ini
+    libfuzzer: true
+    timeout: 5
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_dolphin_ini/testsuite

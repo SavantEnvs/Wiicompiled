@@ -1,0 +1,5 @@
+# Build outputs of mayhem/build.sh and upstream builds: never part of the image context.
+build-mayhem
+build
+fuzz_*
+ctrf-report.json

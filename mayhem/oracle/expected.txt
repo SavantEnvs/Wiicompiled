@@ -1,0 +1,22 @@
+riivolution parsed=1
+riivolution valid RMCE01=1 RSBE01=0 sections=1 patches=2
+riivolution config parsed=1 options=2
+patch id=tracks root=/CTGP/tracks files=1 folders=1 memory=1
+  file disc=/Scene/UI/Title.szs external=Title.szs offset=16 length=32
+traversal rejected=1
+u8 found=1 size=4 01 02 03 04 missing=0
+config widescreen=1 vsync=0 width=1280 api=vulkan
+config update=[video]
+vsync = true
+
+expr [`A` | `B`] ok=1 value=1.000
+expr [`A` & `B`] ok=1 value=0.250
+expr [!`B`] ok=1 value=0.750
+expr [(`A` + `B`) * 0.5] ok=1 value=0.625
+expr [`A` &] ok=0 value=-1.000
+dolphin ok=1 device=SDL/0/Xbox Controller controls=5
+  Buttons/A = `Button A`
+  Buttons/B = `Button B` | `Button X`
+  Main Stick/Up = `Left Y+`
+  Triggers/L = `Trigger L`
+  D-Pad/Up = !`Pad N` & `Shift`

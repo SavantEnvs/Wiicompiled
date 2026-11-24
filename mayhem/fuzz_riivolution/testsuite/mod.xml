@@ -1,0 +1,20 @@
+<wiidisc version="1" root="/CTGP">
+  <id game="RMC"><region type="E"/><region type="P"/></id>
+  <options>
+    <section name="Tracks">
+      <option id="ct" name="Custom Tracks" default="1">
+        <choice name="Enabled"><patch id="tracks"/></choice>
+      </option>
+      <option id="mus" name="Music">
+        <choice name="On"><patch id="music"><param name="dir" value="bgm"/></patch></choice>
+      </option>
+    </section>
+  </options>
+  <patch id="tracks" root="/CTGP/tracks">
+    <folder external="Race/Course" disc="/Race/Course" create="true"/>
+    <file disc="/Scene/UI/Title.szs" external="Title.szs" offset="0x10" length="32"/>
+    <savegame external="/save/{$__gameid}" clone="false"/>
+    <memory offset="0x80001000" value="60000000" original="4e800020"/>
+  </patch>
+  <patch id="music"><folder external="{$dir}" disc="/sound/strm" recursive="false"/></patch>
+</wiidisc>

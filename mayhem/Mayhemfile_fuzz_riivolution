@@ -1,0 +1,9 @@
+project: savantenvs/Wiicompiled
+target: fuzz_riivolution
+cmds:
+  - cmd: /mayhem/fuzz_riivolution
+    libfuzzer: true
+    timeout: 5
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_riivolution/testsuite
